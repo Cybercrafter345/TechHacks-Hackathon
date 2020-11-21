@@ -1,12 +1,18 @@
+//number of questions per quiz
 let numQuezs=1
 
+//function called one the start button is pressed
 const quiz = async () => {
+        //wait for the title, description, image, and start button to go away
         const result = await byebye()
         setTimeout(() => {
 
+            //Turn the json string into an HTML div
             var questions=generate()
+            //Randomly choose questions from that list
             let chosen = getRandom(questions, numQuezs)
 
+            //go through each chosen question and display it on the screen
             for(var i=0; i<numQuezs; i++){
                 let q=chosen[i]
 
@@ -15,6 +21,7 @@ const quiz = async () => {
         
         }, 2000);}
 
+//function to choose randomly from an array
 function getRandom(arr, n) {
     var result = new Array(n),
         len = arr.length,
@@ -28,7 +35,7 @@ function getRandom(arr, n) {
     }
     return result;
 }
-
+//function to gather all the html divs
 function generate(){
     let questions=[]
     for(var i in QA){
@@ -38,6 +45,7 @@ function generate(){
     
     return questions
 }
+//function to randomly shuffle the answers for each question
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
   while (0 !== currentIndex) {
@@ -50,13 +58,16 @@ function shuffle(array) {
 
   return array;
   }
-
+//function to take a json object and all of its parts
+//and turn those into a div using JS DOM
 function quez(obj){
-    let allname='qpage'
-    let qname='quez'
-    let ansnames='answez'
-    let aname='answer'
+        //set classname variables for each of the layered divs
+        let allname='qpage'
+        let qname='quez'
+        let ansnames='answez'
+        let aname='answer'
     
+        //create all of the containers and package them together
         let All=document.createElement('div')
         All.className=allname
         let question=document.createElement('div')
@@ -66,12 +77,14 @@ function quez(obj){
         All.appendChild(question)
         All.appendChild(answers)
 
+        //turn a string into a DOM text node
         function text(txt){
             var h = document.createElement("p")
             var t = document.createTextNode(txt);
             h.appendChild(t);   
             return h
         }
+        //turn a string into answer format
         function ans(a){
             let t=text(a)
             t.className=aname
@@ -80,6 +93,7 @@ function quez(obj){
             d.appendChild(document.createElement('br'))
             return d
         }
+        //turn a string into an answer that lights up when correct
         function correct(answ){
             let a=ans(answ)
             a.onclick = function() {
@@ -88,6 +102,7 @@ function quez(obj){
             a.id='yup'
             return a
         }
+        //turn a strign into an answer that shows the correct answer when picked
         function wrong(answ){
             let a = ans(answ)
             a.onclick = function() {
@@ -97,23 +112,23 @@ function quez(obj){
             return a
         }
 
+        //add the text to the question div
         question.appendChild(text(obj.q))
+        //shuffle the answers and give them correct or incorrect status
         let as=shuffle([
             correct(obj.a),
             wrong(obj.a1),
             wrong(obj.a2),
             wrong(obj.a3),
         ])
-        
-            answers.appendChild(as[0])
-            answers.appendChild(as[1])
-            answers.appendChild(as[2])
-            answers.appendChild(as[3])
-        
+        //add all the formatted answers to the answer div
+        for(var i in as){answers.appendChild(as[i])}
+
+        //return the overall container div
         return All
     }
 
-
+//function to move the home screen out of the way
 function byebye(){
     function func(){
         let t=document.getElementById('go away')
@@ -134,7 +149,7 @@ function byebye(){
 
 
 
-
+//json containing all of the questions
 
 let QA=[
     {
