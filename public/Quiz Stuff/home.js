@@ -1,25 +1,41 @@
-let numQuezs=10
+let numQuezs=1
 
 const quiz = async () => {
         const result = await byebye()
         setTimeout(() => {
 
             var questions=generate()
+            let chosen = getRandom(questions, numQuezs)
 
-            for(var i; i=numQuezs; i++){
+            for(var i=0; i<numQuezs; i++){
+                let q=chosen[i]
 
+                document.body.appendChild(q)
             }
         
-        }, 
+        }, 2000);}
 
-2000);}
-
+function getRandom(arr, n) {
+    var result = new Array(n),
+        len = arr.length,
+        taken = new Array(len);
+    if (n > len)
+        throw new RangeError("getRandom: more elements taken than available");
+    while (n--) {
+        var x = Math.floor(Math.random() * len);
+        result[n] = arr[x in taken ? taken[x] : x];
+        taken[x] = --len in taken ? taken[len] : len;
+    }
+    return result;
+}
 
 function generate(){
     let questions=[]
     for(var i in QA){
-        questions.push(quez(QA[i]))
+        let div=quez(QA[i])
+        questions.push(div)
     }
+    
     return questions
 }
 function shuffle(array) {
@@ -67,12 +83,17 @@ function quez(obj){
         function correct(answ){
             let a=ans(answ)
             a.onclick = function() {
-                a.style.backgroundColor='limegreen'
+                a.childNodes[0].style.backgroundColor='limegreen'
             };
+            a.id='yup'
             return a
         }
         function wrong(answ){
             let a = ans(answ)
+            a.onclick = function() {
+                a.childNodes[0].style.backgroundColor='red'
+                document.getElementById('yup').childNodes[0].style.backgroundColor='limegreen'
+            };
             return a
         }
 
@@ -81,9 +102,13 @@ function quez(obj){
             correct(obj.a),
             wrong(obj.a1),
             wrong(obj.a2),
-            wrong(obj.a3)])
-
-        for(var i in as){answers.appendChild(as[i])}
+            wrong(obj.a3),
+        ])
+        
+            answers.appendChild(as[0])
+            answers.appendChild(as[1])
+            answers.appendChild(as[2])
+            answers.appendChild(as[3])
         
         return All
     }
