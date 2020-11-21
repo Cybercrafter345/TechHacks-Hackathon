@@ -39,7 +39,6 @@ body{
 }
 .goaway{
     animation-duration: 2s;
-    animation-timing-function: ease-out;
     position: relative;
 }
 
@@ -90,6 +89,7 @@ body{
 }
 
 .blurb{
+
     display: inline;
     width:65%;
     padding-right: 5%;
@@ -98,4 +98,24 @@ body{
     font-size: 30px;
     font-family: 'Noto Sans JP', sans-serif;
     text-align: justify;
+}
+
+/*End Screen Stuff*/
+.mess{
+    text-align: center;
+    font-size: 25px;
+}
+.scoring{
+    text-align: center;
+    font-size: 15px;
+}
+.cert{
+    width:30%;
+    margin-right: 35%;
+    margin-left: 35%;
+}
+.goback{
+    background-color:#22ce22;
+    font-size: 15px;
+    width:10%;
 }

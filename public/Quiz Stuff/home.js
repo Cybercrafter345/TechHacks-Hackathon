@@ -1,6 +1,6 @@
 //number of questions per quiz
 let numQuezs=2
-let score=0
+var score=0
 let nextQ=false
 
 
@@ -21,9 +21,13 @@ const quiz = async () => {
 
 //function to display a question
 function display(){
+    if(chosen.length==0){
+        EndScreen()
+    }else{
     let q=chosen[0]
     document.body.appendChild(q)
     chosen.shift()
+    }
 }
 //function to choose randomly from an array
 function getRandom(arr, n) {
@@ -62,6 +66,15 @@ function shuffle(array) {
 
   return array;
   }
+
+//turn a string into a DOM text node
+function text(txt){
+    var h = document.createElement("p")
+    var t = document.createTextNode(txt);
+    h.appendChild(t);   
+    return h
+}
+
 //function to take a json object and all of its parts
 //and turn those into a div using JS DOM
 function quez(obj){
@@ -82,13 +95,6 @@ function quez(obj){
         All.appendChild(question)
         All.appendChild(answers)
 
-        //turn a string into a DOM text node
-        function text(txt){
-            var h = document.createElement("p")
-            var t = document.createTextNode(txt);
-            h.appendChild(t);   
-            return h
-        }
         //turn a string into answer format
         function ans(a){
             let t=text(a)
@@ -153,6 +159,28 @@ function quez(obj){
         return All
     }
 
+//function to make the final screen
+function EndScreen(){
+    let path='./L/Certificates/'
+    if(score<(numQuezs/4)){var message='Better Luck Next Time!'; path+='PPEP.jpg' }
+    else if(score<2*(numQuezs/4)){var message='You can do better than that!'; path+='SS.jpg' }
+    else if(score<3*(numQuezs/4)){var message='Nice Work'; path+='PP.jpg' }
+    else{var message='Awesome Job!'; path+='EA.jpg' }
+
+    let str=`<p class='mess'>That's It! ${message}</p>
+    <p class='scoring'>You got a ${score}/${numQuezs}<p>
+    <img class='cert' alt='certificate' src=${path}>
+    <button class='start goback' onclick='GoBack()'>Back Home</button>`
+    
+    document.body.appendChild(GenNode(str))
+}
+
+function GenNode(str){
+    let All=document.createElement('div')
+    All.insertAdjacentHTML( 'beforeend', str );
+    return All
+}
+
 //function to move the home screen out of the way
 function byebye(){
     function func(){
@@ -172,10 +200,34 @@ function byebye(){
     setTimeout(() => {null}, 2000);
 }
 
+//code to recreate the home screen
+var homescreen=`
+    <p id='title' class='title'>Covid Quiz</p>
+    <img alt='Pandemic Pupil' src='./L/Logo.png' class='graphic' id='graphic' align='left'>
+    <div class='blurb' id='blurb'><p style='margin-right:5%;'>
+        This quiz will test your knowledge on the pandemic and see how much you really know. The goal is to keep everbody safe 
+        and informed, and hopefully prevent the spread of misinformation. Enjoy the quiz!
+    </p></div>
+<br>
+    <button onclick='quiz()' id='start' class='start'>Start</button>`
+function GoBack(){
+    let d=document.body
+    while (d.firstChild) {
+        d.removeChild(d.firstChild);
+    }
+    let newun=GenNode(homescreen)
+    d.appendChild(newun)
+    newun.id='go away'
+    newun.className='goaway'
 
+    let t=document.getElementById('go away')
+    t.style.animationName =''
+    t.style.top = '0%'
+    t.style.animationDuration= '2s'
+    t.style.position= 'relative'
+}
 
 //json containing all of the questions
-
 let QA=[
     {
         "q": "Why is it called Covid - NINETEEN ?",
