@@ -64,14 +64,27 @@ function quez(obj){
             d.appendChild(document.createElement('br'))
             return d
         }
+        function correct(answ){
+            let a=ans(answ)
+            a.onclick = function() {
+                a.style.backgroundColor='limegreen'
+            };
+            return a
+        }
+        function wrong(answ){
+            let a = ans(answ)
+            return a
+        }
 
         question.appendChild(text(obj.q))
-        let as=shuffle([obj.a,obj.a1,obj.a2,obj.a3])
-        answers.appendChild(ans(as[0]))
-        answers.appendChild(ans(as[1]))
-        answers.appendChild(ans(as[2]))
-        answers.appendChild(ans(as[3]))
+        let as=shuffle([
+            correct(obj.a),
+            wrong(obj.a1),
+            wrong(obj.a2),
+            wrong(obj.a3)])
 
+        for(var i in as){answers.appendChild(as[i])}
+        
         return All
     }
 
@@ -93,6 +106,10 @@ function byebye(){
     doit()
     setTimeout(() => {null}, 2000);
 }
+
+
+
+
 
 let QA=[
     {
