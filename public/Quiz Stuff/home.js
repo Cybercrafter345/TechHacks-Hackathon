@@ -1,5 +1,8 @@
 //number of questions per quiz
-let numQuezs=1
+let numQuezs=2
+let score=0
+let nextQ=false
+
 
 //function called one the start button is pressed
 const quiz = async () => {
@@ -10,17 +13,18 @@ const quiz = async () => {
             //Turn the json string into an HTML div
             var questions=generate()
             //Randomly choose questions from that list
-            let chosen = getRandom(questions, numQuezs)
-
-            //go through each chosen question and display it on the screen
-            for(var i=0; i<numQuezs; i++){
-                let q=chosen[i]
-
-                document.body.appendChild(q)
-            }
+            chosen = getRandom(questions, numQuezs)
+            //display the first question
+            display()
         
         }, 2000);}
 
+//function to display a question
+function display(){
+    let q=chosen[0]
+    document.body.appendChild(q)
+    chosen.shift()
+}
 //function to choose randomly from an array
 function getRandom(arr, n) {
     var result = new Array(n),
@@ -70,6 +74,7 @@ function quez(obj){
         //create all of the containers and package them together
         let All=document.createElement('div')
         All.className=allname
+        All.id=allname
         let question=document.createElement('div')
         question.className=qname
         let answers=document.createElement('div')
@@ -93,11 +98,30 @@ function quez(obj){
             d.appendChild(document.createElement('br'))
             return d
         }
+        //Function to make a 'next' button once the person answers
+        function nextbtn(){
+            let d=document.getElementById(allname)
+            let b=document.createElement('BUTTON')
+            b.className='start'
+            var t = document.createTextNode("Next -->");
+            b.appendChild(t);
+            function fadeout(){
+                let d=document.getElementById('qpage')
+                d.style.animationName='fadeaway'
+            }
+            b.onclick = async () => {
+                await fadeout()
+                setTimeout(() => {document.getElementById('qpage').remove();display()}, 2000);}
+
+            d.appendChild(b)
+        }
         //turn a string into an answer that lights up when correct
         function correct(answ){
             let a=ans(answ)
             a.onclick = function() {
                 a.childNodes[0].style.backgroundColor='limegreen'
+                score++
+                nextbtn()
             };
             a.id='yup'
             return a
@@ -108,6 +132,7 @@ function quez(obj){
             a.onclick = function() {
                 a.childNodes[0].style.backgroundColor='red'
                 document.getElementById('yup').childNodes[0].style.backgroundColor='limegreen'
+                nextbtn()
             };
             return a
         }
@@ -154,6 +179,13 @@ function byebye(){
 let QA=[
     {
         "q": "Why is it called Covid - NINETEEN ?",
+        "a": "It is because it was discovered in 2019",
+        "a1": "It is because there are 19 known strands",
+        "a2": "It is because there are 19 stems on the molecule",
+        "a3": "It is because there have been 19 previous coronavirus'"
+    },
+    {
+        "q": "Why is it called Covid - NINeeeeeeeeeeeeeeeeeeeETEEN ?",
         "a": "It is because it was discovered in 2019",
         "a1": "It is because there are 19 known strands",
         "a2": "It is because there are 19 stems on the molecule",

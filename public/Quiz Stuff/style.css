@@ -32,6 +32,10 @@ body{
     10% {top:15%}
     100% {top:-100%;}
 }
+@keyframes fadeaway{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
 .goaway{
     animation-duration: 2s;
     animation-timing-function: ease-out;
@@ -43,6 +47,8 @@ body{
   -ms-transform: translateY(25%);
   transform: translateY(25%);
   font-family: 'Roboto', sans-serif;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 .quez{
     font-size:30px;
