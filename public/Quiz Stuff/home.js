@@ -111,7 +111,7 @@ function quez(obj){
             }
             b.onclick = async () => {
                 await fadeout()
-                setTimeout(() => {document.getElementById('qpage').remove();display()}, 2000);}
+                setTimeout(() => {document.getElementById('qpage').remove();display()}, 1000);}
 
             d.appendChild(b)
         }

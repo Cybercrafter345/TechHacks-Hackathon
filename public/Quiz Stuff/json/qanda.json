@@ -50,9 +50,9 @@
     },
     {
         "q": "Getting a flu vaccine helps you just in case, you get both the flu and Coronavirus at the same time",
-        "a": "TRUE",
+        "a": "True, the flu vaccine helps you fight the flu, which lets your body focus more on the coronavirus",
         "a1": "FALSE",
-        "a2": NaN,
+        "a2": "True, the flu vaccine helps fight both the flu and Coronavirus",
         "a3": NaN
     },
     {
@@ -94,8 +94,8 @@
         "q": "Who was the first governor to close schools in response to the pandemic?",
         "a": "Mike DeWine (Ohio\u2019s governor)",
         "a1": "Andrew Cuomo (New York's governor)",
-        "a2": NaN,
-        "a3": NaN
+        "a2": "Phil Murphy (New Jersey's Governor)",
+        "a3": "Jared Polis (Colorado's Governor)"
     },
     {
         "q": "About what percentage of infected people recover without needing hospital treatment according to the World Health Organization website?",
@@ -107,22 +107,78 @@
     {
         "q": "How big is the coronavirus?",
         "a": "80 billionths of a meter in diameter",
-        "a1": NaN,
-        "a2": NaN,
-        "a3": NaN
+        "a1": "8 billionths of a meter in diameter",
+        "a2": "800 billionths of a meter in diameter",
+        "a3": "800 millionths of a meter in diameter"
     },
     {
         "q": "What does the virus attach itself to when it enters the human body?",
         "a": "Ace-2 receptors in the lining of the airways",
+        "a1": "Red blood cells",
+        "a2": "Antigens",
+        "a3": "White blood cells"
+    },
+    {
+        "q": "How long can the virus survive on plastic and stainless steel surfaces according to studies?\n",
+        "a": "72 hours or more",
+        "a1": "10-20 hours",
+        "a2": "30-50 hours",
+        "a3": "60-70 hours"
+    },
+    {
+        "q": "Once infected with the coronavirus, how many days can it take to show symptoms?",
+        "a": "2 to 14 days",
+        "a1": "7-14 days",
+        "a2": "2-12 days",
+        "a3": "7-18 days"
+    },
+    {
+        "q": "A high temperature and a continuous cough have been official coronavirus symptoms in the UK since the start of the pandemic. But which of these did the government add to the list of early symptoms that people should look for?",
+        "a": "Losing your sense of smell or taste",
+        "a1": "Diarrhea",
+        "a2": "Stomach Ache",
+        "a3": "Runny Nose"
+    },
+    {
+        "q": NaN,
+        "a": NaN,
         "a1": NaN,
         "a2": NaN,
         "a3": NaN
     },
     {
-        "q": "How long can the virus survive on plastic and stainless steel surfaces according to studies?\r",
-        "a": "72 hours or more",
-        "a1": "10-20 hours",
-        "a2": "30-50 hours",
-        "a3": "60-70 hours"
+        "q": "The coronavirus is more contagious than the flu.",
+        "a": "TRUE",
+        "a1": "FALSE",
+        "a2": NaN,
+        "a3": NaN
+    },
+    {
+        "q": "When was the first case of COVID-19?",
+        "a": "November 17, 2019",
+        "a1": "November 16, 2019",
+        "a2": "November 15, 2019",
+        "a3": "November 20, 2019"
+    },
+    {
+        "q": NaN,
+        "a": NaN,
+        "a1": NaN,
+        "a2": NaN,
+        "a3": NaN
+    },
+    {
+        "q": "Antiobiotics can treat coronavirus.",
+        "a": "FALSE",
+        "a1": "TRUE",
+        "a2": NaN,
+        "a3": NaN
+    },
+    {
+        "q": "Which of the following people is COVID-19 more dangerous for?",
+        "a": NaN,
+        "a1": NaN,
+        "a2": NaN,
+        "a3": NaN
     }
 ]

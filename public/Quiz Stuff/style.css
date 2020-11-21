@@ -16,10 +16,11 @@ body{
     text-align: center;
     font-family: 'Patrick Hand', cursive;
 
-    background: linear-gradient(to top right, #06629b, #01e496);
+    /*background: linear-gradient(to top right, #06629b, #01e496);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;*/
+    color: black;
     
 }
   @keyframes title {
@@ -47,7 +48,7 @@ body{
   -ms-transform: translateY(25%);
   transform: translateY(25%);
   font-family: 'Roboto', sans-serif;
-  animation-duration: 1.5s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 .quez{
