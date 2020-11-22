@@ -24,7 +24,7 @@ body{
     color: black;
     
 }
-  @keyframes title {
+@keyframes title {
     0%   {left:-70%;}
     80% {left:15%}
     100% {left:0%;}
@@ -42,7 +42,6 @@ body{
     animation-duration: 2s;
     position: relative;
 }
-
 .qpage{
     text-align: center;
   -ms-transform: translateY(25%);
@@ -52,7 +51,6 @@ body{
   animation-fill-mode: forwards;
 }
 .closed{pointer-events:none}
-
 .quez{
     font-size:30px;
 }
@@ -102,12 +100,10 @@ user-select: none; /* Standard */
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
-
 .graphic{
     display: inline;
     height: 45%;
 }
-
 .blurb{
 
     display: inline;
