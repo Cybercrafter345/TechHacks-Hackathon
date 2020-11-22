@@ -281,7 +281,7 @@ function GoBack(){
 //json containing all of the questions
 let QA=[
     {
-        "q": "What Part of the body does the Coronavirus Affect",
+        "q": "What part of body does the COVID-19 Affect?",
         "a": "The Lungs/Airways",
         "a1": "The Heart/Blood Vessels",
         "a2": "The Lower Body",
@@ -289,7 +289,7 @@ let QA=[
         "d": 1
     },
     {
-        "q": "What is not a symptom of the Coronavirus",
+        "q": "Which is NOT a symptom of the Coronavirus?",
         "a": "Loss of appetite",
         "a1": "Fever",
         "a2": "Loss of taste/smell",
@@ -297,7 +297,7 @@ let QA=[
         "d": 2
     },
     {
-        "q": "Where was the Coronavirus first discovered",
+        "q": "Where was the Coronavirus first discovered?",
         "a": "Wuhan, China",
         "a1": "New York, USA",
         "a2": "Volgograd, Russia",
@@ -307,13 +307,13 @@ let QA=[
     {
         "q": "People with pre-existing illnesses are more vulnerable to Coronavirus",
         "a": "True, pre-existing conditions weaken your immune system and leave you compromised",
-        "a1": "True because pre-existing conditions can cause coronavirus",
+        "a1": "True, pre-existing conditions can cause coronavirus",
         "a2": "False, your immune system can fight both pre-existing conditions and covid",
         "a3": "False, pre-existing conditions prevent you from getting coronavirus",
         "d": 1
     },
     {
-        "q": "How far do you have to be at a minimum from each other to be safe from Coronavirus",
+        "q": "How far do you have to be, at minimum, from other people to be safe from Coronavirus?",
         "a": "6 Feet",
         "a1": "2 Feet",
         "a2": "15 Feet",
@@ -321,7 +321,7 @@ let QA=[
         "d": 1
     },
     {
-        "q": "Where does Coronavirus spread easiest",
+        "q": "Where does Coronavirus spread the fastest?",
         "a": "In an urban setting",
         "a1": "In a rural setting",
         "a2": "In a suburban setting",
@@ -329,11 +329,11 @@ let QA=[
         "d": 2
     },
     {
-        "q": "Wearing a mask help reduce the spread of Coronavirus",
-        "a": "TRUE because our nose and mouth remains covered when moving and talking",
-        "a1": "TRUE because wearing the mask automatically gets rid of all coronavirus germs",
-        "a2": "FALSE because covering our mouth and nose does not prevent the spread of coronavirus",
-        "a3": "FALSE because masks are just bothersome and do not really help",
+        "q": "Wearing a mask helps stop the spread of Coronavirus",
+        "a": "True, our nose and mouth remains covered when moving and talking",
+        "a1": "True, wearing the mask automatically gets rid of all coronavirus germs",
+        "a2": "False, covering our mouth and nose does not prevent the spread of coronavirus",
+        "a3": "False, masks are just bothersome and do not really help",
         "d": 1
     },
     {
@@ -345,7 +345,7 @@ let QA=[
         "d": 2
     },
     {
-        "q": "What does the 19 in COVID-19 stand for",
+        "q": "What does the 19 in COVID-19 stand for?",
         "a": "2019, the year it was discovered",
         "a1": "the 19th strain of Coronavirus",
         "a2": "the 19 countries its affected so far",
@@ -354,22 +354,22 @@ let QA=[
     },
     {
         "q": "A vaccine helps your immune system produce antibodies against a virus",
-        "a": "TRUE because it learned about how to protect the body against that disease",
-        "a1": "TRUE because it did not learn about how to protect the body against that disease",
-        "a2": "FALSE because it did not learn about how to protect the body against that disease",
-        "a3": "FALSE because it learned about how to protect the body against that disease",
+        "a": "True, the vaccine gives a dead piece of the virus to help train you immune system",
+        "a1": "True, the vaccine automatically destroys any virus particls you come into contact with",
+        "a2": "False, vaccines don't help your immune system at all",
+        "a3": "False, the vaccine is the virus and it makes you sick to give you immunity",
         "d": 2
     },
     {
-        "q": "The Coronavirus is mutating rapidly",
-        "a": "True because of a lack of safety precautions and the fact that it is airborne",
-        "a1": "False because there is a set speed viruses can spread",
-        "a2": "False because everyone is wearing a mask and staying safe",
-        "a3": "True because it travelled all the way from China",
+        "q": "Why is the Coronavirus is spreading so rapidly?",
+        "a": "Because of a lack of safety precautions and the fact that it is airborne",
+        "a1": "It is going the set speed viruses can spread",
+        "a2": "It's not because everyone is wearing a mask and staying safe",
+        "a3": "Because it travelled all the way from China",
         "d": 1
     },
     {
-        "q": "What does a phase 3 when testing a vaccine mean",
+        "q": "What happens in a phase 3 test of a vaccine?",
         "a": "The Coronavirus vaccine is tested on thousands of people",
         "a1": "There are three people testing Coronavirus",
         "a2": "The process of making the vaccine is changed to phase three, making it more effective",
@@ -418,7 +418,7 @@ let QA=[
     },
     {
         "q": "How long can the virus survive on plastic and stainless steel surfaces according to studies?\n",
-        "a": "72 hours or more",
+        "a": "72+ hours",
         "a1": "10-20 hours",
         "a2": "30-50 hours",
         "a3": "60-70 hours",
@@ -426,7 +426,7 @@ let QA=[
     },
     {
         "q": "Once infected with the coronavirus, how many days can it take to show symptoms?",
-        "a": "2 to 14 days",
+        "a": "2-14 days",
         "a1": "7-14 days",
         "a2": "2-12 days",
         "a3": "7-18 days",
@@ -442,10 +442,10 @@ let QA=[
     },
     {
         "q": "The coronavirus is more contagious than the flu.",
-        "a": "TRUE, Because it it airborne",
-        "a1": "TRUE, Because it can't be killed with loud music unlike the flu",
-        "a2": "FALSE, because they are both equally contagius since they are the same thing",
-        "a3": "FALSE, the flu is deadlier and more contagius",
+        "a": "True, the coronavirus is airborne mmaking it more dangerous",
+        "a1": "True, the coronavirus can't be killed with loud music unlike the flu",
+        "a2": "False, both equally contagius since they are the same thing",
+        "a3": "False, the flu is deadlier and more contagius",
         "d": 1
     },
     {
@@ -458,14 +458,14 @@ let QA=[
     },
     {
         "q": "Antiobiotics can treat coronavirus.",
-        "a": "FALSE - Antibiotics can not treat viruses",
-        "a1": "FALSE - We haven't developed the right Antibiotics yet",
-        "a2": "TRUE - They help lessen symptoms ",
-        "a3": "TRUE - They have always been able to treat any type of virus",
+        "a": "False, antibiotics cannot treat viruses",
+        "a1": "False, scientists haven't developed the right Antibiotics yet",
+        "a2": "True, antibiotics help lessen symptoms ",
+        "a3": "True, antibiotics have always been able to treat any type of virus",
         "d": 2
     },
     {
-        "q": "Which of the following people is COVID-19 more dangerous for?",
+        "q": "Which of the following groups is COVID-19 the most dangerous for?",
         "a": "Elders and people with underlying health conditions",
         "a1": "Average Adults",
         "a2": "Babies",
@@ -498,10 +498,10 @@ let QA=[
     },
     {
         "q": "What is a fomite?",
-        "a": "a contaminated object or surface",
-        "a1": "a contaminated person",
-        "a2": "another name for coronavirus",
-        "a3": "an uncontaminated object or surface",
+        "a": "A contaminated object or surface",
+        "a1": "A contaminated person",
+        "a2": "Another name for coronavirus",
+        "a3": "An uncontaminated object or surface",
         "d": 3
     },
     {

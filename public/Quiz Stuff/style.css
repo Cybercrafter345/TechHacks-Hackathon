@@ -8,19 +8,14 @@ body{
     overflow-x: hidden;
 }
 .title{
-    font-size:100px;
     animation-name:title;
     animation-duration: 1.25s;
     animation-timing-function: ease-out;
     position: relative;
 
+    font-size:100px;
     text-align: center;
     font-family: 'Patrick Hand', cursive;
-
-    /*background: linear-gradient(to top right, #06629b, #01e496);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;*/
     color: black;
     
 }
@@ -30,17 +25,17 @@ body{
     100% {left:0%;}
   }
 @keyframes quiztime{
-    0%   {top:0%;}
-    10% {top:15%}
-    100% {top:-100%;}
+    0%   {margin-top:0%;}
+  10%  {margin-top:10%;}
+  100% {margin-top:-50%;}
 }
 @keyframes fadeaway{
     0% {opacity: 1;}
     100% {opacity: 0;}
 }
 .goaway{
-    animation-duration: 2s;
-    position: relative;
+  position: relative;
+  animation-duration: 2s;
 }
 .qpage{
     text-align: center;
@@ -83,9 +78,6 @@ user-select: none; /* Standard */
 
 }
 .start{
-    width:5%;
-    min-width:70px;
-    height:5%;
     background-color: #3ae43a;
     border-radius: 25px;
     border:none;
@@ -94,11 +86,14 @@ user-select: none; /* Standard */
     margin:0 auto;
     display: block;
 
-    margin-top:50px;
     margin-bottom: 5%;
 
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+
+    width:5%;
+    min-width:70px;
+    height:5%;
 }
 .graphic{
     display: inline;
