@@ -103,6 +103,7 @@ user-select: none; /* Standard */
 .graphic{
     display: inline;
     height: 45%;
+    width: 30%;
 }
 .blurb{
 
