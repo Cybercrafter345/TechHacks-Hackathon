@@ -12,7 +12,10 @@ const quiz = async () => {
 
             //Turn the json string into an HTML div
             var questions=generate()
-            ez=questions[0], med=questions[1], hard=questions[2]
+            ez=getRandom(questions[0], Math.ceil(numQuezs/2)); 
+            med=questions[1]; 
+            hard=getRandom(questions[2], Math.ceil(numQuezs/2));
+
             //Randomly choose questions from that list
             chosen = getRandom(med, Math.floor(numQuezs/2))
             //display the first question
@@ -22,18 +25,19 @@ const quiz = async () => {
 
 //function to display a question
 function display(){
+    console.log(score)
     Qcounter++
-    console.log(Qcounter)
-    console.log(chosen)
     if(chosen.length==0){
+
         if(Qcounter-1==numQuezs){
         EndScreen()
         }
         else{
-            if(score<Math.ceil(numQuezs/2)) {chosen = getRandom(ez, Math.floor(numQuezs/2))}
-            else if(score==Math.ceil(numQuezs/2)){chosen = getRandom(med, Math.floor(numQuezs/2))}
-            else {chosen = getRandom(hard, Math.floor(numQuezs/2))}
+            if(score<Math.ceil(numQuezs/2)) {chosen = ez}
+            else {chosen = hard}
+
             let q=chosen[0]
+            q.style.animationName=''
             document.body.appendChild(q)
             chosen.shift()
 
@@ -42,12 +46,14 @@ function display(){
         }
     }else{
     let q=chosen[0]
+    q.style.animationName=''
     document.body.appendChild(q)
     chosen.shift()
 
     let numlab=document.getElementById('PlaceholderToReplace')
     numlab.innerText=Qcounter
     }
+
 }
 //function to choose randomly from an array
 function getRandom(arr, n) {
@@ -113,6 +119,7 @@ function quez(obj){
         question.className=qname
         let answers=document.createElement('div')
         answers.className=ansnames
+        answers.id=ansnames
         All.appendChild(question)
         All.appendChild(answers)
 
@@ -127,6 +134,7 @@ function quez(obj){
         }
         //Function to make a 'next' button once the person answers
         function nextbtn(){
+            document.getElementById(ansnames).className+=' closed'
             let d=document.getElementById(allname)
             let b=document.createElement('BUTTON')
             b.className='start'
@@ -200,7 +208,7 @@ function EndScreen(){
     else if(score<3*(numQuezs/4)){var message='Nice Work'; path+='PP.jpg' }
     else{var message='Awesome Job!'; path+='EA.jpg' }
 
-    let str=`<p class='mess'>That's It! ${message}</p>
+    let str=`<p class='mess'>${message}</p>
     <p class='scoring'>You got a ${score}/${numQuezs}<p>
     <img class='cert' alt='certificate' src=${path}>
     <button class='start goback' onclick='GoBack()'>Back Home</button>`
@@ -235,14 +243,16 @@ function byebye(){
 
 //code to recreate the home screen
 var homescreen=`
-    <p id='title' class='title'>Covid Quiz</p>
-    <img alt='Pandemic Pupil' src='./L/Logo.png' class='graphic' id='graphic' align='left'>
-    <div class='blurb' id='blurb'><p style='margin-right:5%;'>
-        This quiz will test your knowledge on the pandemic and see how much you really know. The goal is to keep everbody safe 
-        and informed, and hopefully prevent the spread of misinformation. Enjoy the quiz!
-    </p></div>
+<div id='go away' class='goaway'>
+<p id='title' class='title'>Covid Quiz</p>
+<img alt='Pandemic Pupil' src='./L/Logo.png' class='graphic' id='graphic' align='left'>
+<div class='blurb' id='blurb'><p style='margin-right:5%;'>
+    This quiz will test your knowledge on the pandemic and see how much you really know. The goal is to keep everbody safe 
+    and informed, and hopefully prevent the spread of misinformation. Enjoy the quiz!
+</p></div></div>
 <br>
-    <button onclick='quiz()' id='start' class='start'>Start</button>`
+<button onclick='quiz()' id='start' class='start'>Start</button>
+<div class=redir><a href='../Santiagos Home Page/home.html'><img class='emoji' alt='Virus' src='L/emoji.png'></a><p class='redirtxt'>Back Home</p></div>`
 function GoBack(){
     score=0
     Qcounter=0
@@ -286,7 +296,7 @@ let QA=[
         "a1": "New York, USA",
         "a2": "Volgograd, Russia",
         "a3": "Wales, Britain",
-        "d": 3
+        "d": 1
     },
     {
         "q": "People with pre-existing illnesses are more vulnerable to Coronavirus",
@@ -302,7 +312,7 @@ let QA=[
         "a1": "2 Feet",
         "a2": "15 Feet",
         "a3": "11 Feet",
-        "d": 2
+        "d": 1
     },
     {
         "q": "Where does Coronavirus spread easiest",
@@ -310,7 +320,7 @@ let QA=[
         "a1": "In a rural setting",
         "a2": "In a suburban setting",
         "a3": "In water",
-        "d": 3
+        "d": 2
     },
     {
         "q": "Wearing a mask help reduce the spread of Coronavirus",
@@ -321,7 +331,7 @@ let QA=[
         "d": 1
     },
     {
-        "q": "Getting a flu vaccine helps you just in case, you get both the flu and Coronavirus at the same time",
+        "q": "Getting a flu vaccine helps you just in case you get both the flu and Coronavirus at the same time",
         "a": "True, the flu vaccine helps you fight the flu, which lets your body focus more on the coronavirus",
         "a1": "False, the flu vaccine is completely ineffective",
         "a2": "True, the flu vaccine helps fight both the flu and Coronavirus",
@@ -334,15 +344,15 @@ let QA=[
         "a1": "the 19th strain of Coronavirus",
         "a2": "the 19 countries its affected so far",
         "a3": "the 19 proteins it has in its shell",
-        "d": 3
+        "d": 2
     },
     {
-        "q": "A vaccine helps you immune system produce antibodies against a virus",
+        "q": "A vaccine helps your immune system produce antibodies against a virus",
         "a": "TRUE because it learned about how to protect the body against that disease",
         "a1": "TRUE because it did not learn about how to protect the body against that disease",
         "a2": "FALSE because it did not learn about how to protect the body against that disease",
         "a3": "FALSE because it learned about how to protect the body against that disease",
-        "d": 1
+        "d": 2
     },
     {
         "q": "The Coronavirus is mutating rapidly",
@@ -350,7 +360,7 @@ let QA=[
         "a1": "False because there is a set speed viruses can spread",
         "a2": "False because everyone is wearing a mask and staying safe",
         "a3": "True because it travelled all the way from China",
-        "d": 2
+        "d": 1
     },
     {
         "q": "What does a phase 3 when testing a vaccine mean",
@@ -366,7 +376,7 @@ let QA=[
         "a1": "New York",
         "a2": "Texas",
         "a3": "Florida",
-        "d": 1
+        "d": 3
     },
     {
         "q": "Who was the first governor to close schools in response to the pandemic?",
@@ -374,7 +384,7 @@ let QA=[
         "a1": "Andrew Cuomo (New York's governor)",
         "a2": "Phil Murphy (New Jersey's Governor)",
         "a3": "Jared Polis (Colorado's Governor)",
-        "d": 2
+        "d": 3
     },
     {
         "q": "About what percentage of infected people recover without needing hospital treatment according to the World Health Organization website?",
@@ -390,7 +400,7 @@ let QA=[
         "a1": "8 billionths of a meter in diameter",
         "a2": "800 billionths of a meter in diameter",
         "a3": "800 millionths of a meter in diameter",
-        "d": 1
+        "d": 3
     },
     {
         "q": "What does the virus attach itself to when it enters the human body?",
@@ -414,7 +424,7 @@ let QA=[
         "a1": "7-14 days",
         "a2": "2-12 days",
         "a3": "7-18 days",
-        "d": 1
+        "d": 2
     },
     {
         "q": "A high temperature and a continuous cough have been official coronavirus symptoms in the UK since the start of the pandemic. But which of these did the government add to the list of early symptoms that people should look for?",
@@ -422,7 +432,7 @@ let QA=[
         "a1": "Diarrhea",
         "a2": "Stomach Ache",
         "a3": "Runny Nose",
-        "d": 2
+        "d": 1
     },
     {
         "q": "The coronavirus is more contagious than the flu.",
@@ -430,15 +440,15 @@ let QA=[
         "a1": "TRUE, Because it can't be killed with loud music unlike the flu",
         "a2": "FALSE, because they are both equally contagius since they are the same thing",
         "a3": "FALSE, the flu is deadlier and more contagius",
-        "d": 3
+        "d": 1
     },
     {
         "q": "When was the first case of COVID-19?",
-        "a": "17-Nov-19",
-        "a1": "16-Nov-19",
-        "a2": "15-Nov-19",
-        "a3": "20-Nov-19",
-        "d": 1
+        "a": "November 17, 2019",
+        "a1": "November 16, 2019",
+        "a2": "November 15, 2019",
+        "a3": "November 20, 2019",
+        "d": 3
     },
     {
         "q": "Antiobiotics can treat coronavirus.",
@@ -454,7 +464,7 @@ let QA=[
         "a1": "Average Adults",
         "a2": "Babies",
         "a3": "Teenagers",
-        "d": 3
+        "d": 1
     },
     {
         "q": "How long does the novel coronavirus survive outside the body?",
@@ -462,7 +472,7 @@ let QA=[
         "a1": "Several minutes",
         "a2": "Several seconds",
         "a3": "Several months",
-        "d": 1
+        "d": 2
     },
     {
         "q": "Covid-19 infects people by injecting its genome into their cells. What type of genetic material is the Covid-19 genome made up of?\n",
@@ -470,7 +480,7 @@ let QA=[
         "a1": "DNA",
         "a2": "Mitchondria",
         "a3": "Ribosome",
-        "d": 2
+        "d": 3
     },
     {
         "q": "How should a mask be properly worn?",
@@ -478,7 +488,7 @@ let QA=[
         "a1": "Put it under your nose and mouth and secure it under your chin",
         "a2": "Put it over your eyes",
         "a3": "Just cover the mouth and not the nose",
-        "d": 3
+        "d": 2
     },
     {
         "q": "What is a fomite?",
@@ -486,7 +496,7 @@ let QA=[
         "a1": "a contaminated person",
         "a2": "another name for coronavirus",
         "a3": "an uncontaminated object or surface",
-        "d": 1
+        "d": 3
     },
     {
         "q": "Can letters, products and packages be contaminated by the coronavirus (COVID-19) virus?",
@@ -494,7 +504,7 @@ let QA=[
         "a1": "No because it does not carry any outside germs",
         "a2": "Yes because they do not have masks on them",
         "a3": "No because they are always clean with no germs",
-        "d": 2
+        "d": 1
     },
     {
         "q": "On March 1st, there were fewer than a dozen known COVID-19 related deaths in the US. Two months later, how many COVID-19 deaths were reported in the US?",

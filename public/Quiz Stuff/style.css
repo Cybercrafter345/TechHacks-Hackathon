@@ -51,6 +51,8 @@ body{
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
+.closed{pointer-events:none}
+
 .quez{
     font-size:30px;
 }
@@ -95,6 +97,7 @@ user-select: none; /* Standard */
     display: block;
 
     margin-top:50px;
+    margin-bottom: 5%;
 
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -137,4 +140,47 @@ user-select: none; /* Standard */
     background-color:#22ce22;
     font-size: 15px;
     width:10%;
+}
+
+/*Redirect*/
+.emoji{
+    height:30px;
+    width: 30px;
+    float:right;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+.redir{
+    float:right;
+    position:absolute;
+    top:1%;
+    right:1%;
+    background-color: #3e3e3e;
+    width:0px;
+    height: 0px;
+    border-radius: 31px;
+    padding:0px;
+}
+.redir:hover{
+    width:200px;
+    height: 31px;
+    padding:3px;
+}
+.redir:hover .redirtxt{
+    opacity:1;
+}
+.redir:hover .emoji{
+    margin-top: 0px;
+    margin-right: 0px;
+}
+.redirtxt{
+    position:absolute;
+    top: -8px;
+    color:white;
+    opacity: 0;
+    float: right;
+    font-family: 'Roboto', sans-serif;
+    padding-right:0px;
+    padding-left: 40px;
+    font-size: 18px;
 }
