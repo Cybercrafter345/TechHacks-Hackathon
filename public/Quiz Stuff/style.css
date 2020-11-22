@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 body{
     overflow-y: visible;
@@ -9,7 +10,7 @@ body{
 .title{
     font-size:100px;
     animation-name:title;
-    animation-duration: 2s;
+    animation-duration: 1.25s;
     animation-timing-function: ease-out;
     position: relative;
 
@@ -53,6 +54,14 @@ body{
 .quez{
     font-size:30px;
 }
+.quez span{
+    padding-right:10px;
+    padding-left:10px;
+    height:30px;
+    border-radius: 50%;
+    color: white;
+    background-color: lightblue;
+}
 .answez{
     text-align: center;
 }
@@ -67,12 +76,17 @@ body{
     background-color:#dadada;
     padding:1%;
 
+    -webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+
 }
 .start{
     width:5%;
     min-width:70px;
     height:5%;
-    background-color: limegreen;
+    background-color: #3ae43a;
     border-radius: 25px;
     border:none;
     outline:none;
@@ -81,6 +95,9 @@ body{
     display: block;
 
     margin-top:50px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 
 .graphic{
@@ -104,10 +121,12 @@ body{
 .mess{
     text-align: center;
     font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
 }
 .scoring{
     text-align: center;
     font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
 }
 .cert{
     width:30%;

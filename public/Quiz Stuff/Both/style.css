@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    background-color: #303030;
+}
+:root{
+    --size:400px;
+}
+.title{
+    text-align: center;
+    font-size: 75px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5%;
+    color: white;
+}
+.container{
+    display: inline;
+}
+.image-cropper {
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.image-cropper:hover{
+    animation-name: hover;
+}
+.image-cropper:hover::after { 
+    animation-name: hover;
+    animation-direction: reverse;
+ } 
+@keyframes hover{
+    0% {box-shadow: 0 0 0px 0px #0a0a0a;transform: scale(1.00);}
+    100% {box-shadow: 0 0 50px 10px #0a0a0a;transform: scale(1.05);}
+}
+.link{
+    width: var(--size);
+    display: inline-block;
+}
+.Name{
+    font-size: 45px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    
+}  
+  img {
+    display: inline;
+    margin: 0 auto;
+    width:var(--size);
+    height:var(--size);
+  }
+
+  .l{
+      float:left;
+      margin-left:15%;
+  }
+  .r{
+      float:right;
+      margin-right: 15%;
+  }

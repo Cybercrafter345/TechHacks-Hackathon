@@ -1,28 +1,33 @@
-Questions:,Correct Answer,Fake Answer 1,Fake Answer 2,Fake Answer 3,Source
-What Part of the body does the Coronavirus Affect,The Lungs/Airways,The Heart/Blood Vessels,The Lower Body,The Brain and Nervous System,https://www.avert.org/coronavirus/faqs?gclid=Cj0KCQiAkuP9BRCkARIsAKGLE8UJ6D2vQu2HGrTiltj8Nednb_uVXE5cdqeiDcOT3OAxPR33272LaqkaAqDrEALw_wcB
-What is not a symptom of the Coronavirus,Loss of appetite,Fever,Loss of taste/smell,Tiredness,https://www.avert.org/coronavirus/faqs?gclid=Cj0KCQiAkuP9BRCkARIsAKGLE8UJ6D2vQu2HGrTiltj8Nednb_uVXE5cdqeiDcOT3OAxPR33272LaqkaAqDrEALw_wcB
-Where was the Coronavirus first discovered,"Wuhan, China","New York, USA","Volgograd, Russia","Wales, Brittain",https://www.avert.org/coronavirus/faqs?gclid=Cj0KCQiAkuP9BRCkARIsAKGLE8UJ6D2vQu2HGrTiltj8Nednb_uVXE5cdqeiDcOT3OAxPR33272LaqkaAqDrEALw_wcB
-People with pre-existing illnesses more vulnerable to Coronavirus,TRUE,FALSE,,,https://www.avert.org/coronavirus/faqs?gclid=Cj0KCQiAkuP9BRCkARIsAKGLE8UJ6D2vQu2HGrTiltj8Nednb_uVXE5cdqeiDcOT3OAxPR33272LaqkaAqDrEALw_wcB
-How far do you have to be at a minimum from each other to be safe from Coronavirus,6 Feet,2 Feet,15 Feet,11 Feet,https://www.cdc.gov/coronavirus/2019-ncov/faq.html
-Where does Coronavirus spread easiest,In an urban setting,In a rural setting,In a suburban setting,In water,https://www.cdc.gov/coronavirus/2019-ncov/faq.html
-Wearing a mask help reduce the spread of Coronavirus,TRUE,FALSE,,,https://www.cdc.gov/coronavirus/2019-ncov/faq.html
-"Getting a flu vaccine helps you just in case, you get both the flu and Coronavirus at the same time","True, the flu vaccine helps you fight the flu, which lets your body focus more on the coronavirus",FALSE,"True, the flu vaccine helps fight both the flu and Coronavirus",,https://www.cdc.gov/coronavirus/2019-ncov/faq.html
-What does the 19 in COVID-19 stand for,"2019, the year it was discovered",the 19th strain of Coronavirus,the 19 countries its affected so far,the 19 proteins it has in its shell,https://www.jnj.com/innovation/covid-19-quiz-how-much-do-you-know-about-coronavirus
-A vaccine helps you immune system produce antibodies against a virus,TRUE,FALSE,,,https://www.jnj.com/innovation/covid-19-quiz-how-much-do-you-know-about-coronavirus
-The Coronavirus is mutating rapidly,TRUE,FALSE,,,https://www.jnj.com/innovation/covid-19-quiz-how-much-do-you-know-about-coronavirus
-What does a phase 3 when testing a vaccine mean,The Coronavirus vaccine is tested on thousands of people,There are three people testing Coronavirus,"The process of making the vaccine is changed to phase three, making it more effective",The vaccine is simulated in a supercomputer,https://www.jnj.com/innovation/covid-19-quiz-how-much-do-you-know-about-coronavirus
-Where was the first known death due to COVID-19 in the US?,California,New York,Texas,Florida,
-Who was the first governor to close schools in response to the pandemic?,Mike DeWine (Ohio’s governor),Andrew Cuomo (New York's governor),Phil Murphy (New Jersey's Governor),Jared Polis (Colorado's Governor),
-About what percentage of infected people recover without needing hospital treatment according to the World Health Organization website?,80%,70%,50%,60%,
-How big is the coronavirus?,80 billionths of a meter in diameter,8 billionths of a meter in diameter,800 billionths of a meter in diameter,800 millionths of a meter in diameter,
-What does the virus attach itself to when it enters the human body?,Ace-2 receptors in the lining of the airways,Red blood cells,Antigens,White blood cells,
-"How long can the virus survive on plastic and stainless steel surfaces according to studies?
+Difficulty,Questions:,Correct Answer,Fake Answer 1,Fake Answer 2,Fake Answer 3,
+1,What Part of the body does the Coronavirus Affect,The Lungs/Airways,The Heart/Blood Vessels,The Lower Body,The Brain and Nervous System,
+2,What is not a symptom of the Coronavirus,Loss of appetite,Fever,Loss of taste/smell,Tiredness,
+3,Where was the Coronavirus first discovered,"Wuhan, China","New York, USA","Volgograd, Russia","Wales, Britain",
+1,People with pre-existing illnesses are more vulnerable to Coronavirus,"True, pre-existing conditions weaken your immune system and leave you compromised",True because pre-existing conditions can cause coronavirus,"False, your immune system can fight both pre-existing conditions and covid","False, pre-existing conditions prevent you from getting coronavirus",
+2,How far do you have to be at a minimum from each other to be safe from Coronavirus,6 Feet,2 Feet,15 Feet,11 Feet,
+3,Where does Coronavirus spread easiest,In an urban setting,In a rural setting,In a suburban setting,In water,
+1,Wearing a mask help reduce the spread of Coronavirus,TRUE because our nose and mouth remains covered when moving and talking,TRUE because wearing the mask automatically gets rid of all coronavirus germs,FALSE because covering our mouth and nose does not prevent the spread of coronavirus,FALSE because masks are just bothersome and do not really help,
+2,"Getting a flu vaccine helps you just in case, you get both the flu and Coronavirus at the same time","True, the flu vaccine helps you fight the flu, which lets your body focus more on the coronavirus","False, the flu vaccine is completely ineffective","True, the flu vaccine helps fight both the flu and Coronavirus","False, the flu vaccine worsens your symptoms if you have both the coronavirus and the flu",
+3,What does the 19 in COVID-19 stand for,"2019, the year it was discovered",the 19th strain of Coronavirus,the 19 countries its affected so far,the 19 proteins it has in its shell,
+1,A vaccine helps you immune system produce antibodies against a virus,TRUE because it learned about how to protect the body against that disease,TRUE because it did not learn about how to protect the body against that disease,FALSE because it did not learn about how to protect the body against that disease,FALSE because it learned about how to protect the body against that disease,
+2,The Coronavirus is mutating rapidly,True because of a lack of safety precautions and the fact that it is airborne,False because there is a set speed viruses can spread,False because everyone is wearing a mask and staying safe,True because it travelled all the way from China,
+3,What does a phase 3 when testing a vaccine mean,The Coronavirus vaccine is tested on thousands of people,There are three people testing Coronavirus,"The process of making the vaccine is changed to phase three, making it more effective",The vaccine is simulated in a supercomputer,
+1,Where was the first known death due to COVID-19 in the US?,California,New York,Texas,Florida,
+2,Who was the first governor to close schools in response to the pandemic?,Mike DeWine (Ohio’s governor),Andrew Cuomo (New York's governor),Phil Murphy (New Jersey's Governor),Jared Polis (Colorado's Governor),
+3,About what percentage of infected people recover without needing hospital treatment according to the World Health Organization website?,80%,70%,50%,60%,
+1,How big is the coronavirus?,80 billionths of a meter in diameter,8 billionths of a meter in diameter,800 billionths of a meter in diameter,800 millionths of a meter in diameter,
+2,What does the virus attach itself to when it enters the human body?,Ace-2 receptors in the lining of the airways,Red blood cells,Antigens,White blood cells,
+3,"How long can the virus survive on plastic and stainless steel surfaces according to studies?
 ",72 hours or more,10-20 hours,30-50 hours,60-70 hours,
-"Once infected with the coronavirus, how many days can it take to show symptoms?",2 to 14 days,7-14 days,2-12 days,7-18 days,
-A high temperature and a continuous cough have been official coronavirus symptoms in the UK since the start of the pandemic. But which of these did the government add to the list of early symptoms that people should look for?,Losing your sense of smell or taste,Diarrhea,Stomach Ache,Runny Nose,
-,,,,,
-The coronavirus is more contagious than the flu.,TRUE,FALSE,,,
-When was the first case of COVID-19?,"November 17, 2019","November 16, 2019","November 15, 2019","November 20, 2019",
-,,,,,
-Antiobiotics can treat coronavirus.,FALSE,TRUE,,,
-Which of the following people is COVID-19 more dangerous for?,,,,,
+1,"Once infected with the coronavirus, how many days can it take to show symptoms?",2 to 14 days,7-14 days,2-12 days,7-18 days,
+2,A high temperature and a continuous cough have been official coronavirus symptoms in the UK since the start of the pandemic. But which of these did the government add to the list of early symptoms that people should look for?,Losing your sense of smell or taste,Diarrhea,Stomach Ache,Runny Nose,
+3,The coronavirus is more contagious than the flu.,"TRUE, Because it it airborne","TRUE, Because it can't be killed with loud music unlike the flu","FALSE, because they are both equally contagius since they are the same thing","FALSE, the flu is deadlier and more contagius",
+1,When was the first case of COVID-19?,17-Nov-19,16-Nov-19,15-Nov-19,20-Nov-19,
+2,Antiobiotics can treat coronavirus.,FALSE - Antibiotics can not treat viruses,FALSE - We haven't developed the right Antibiotics yet,TRUE - They help lessen symptoms ,TRUE - They have always been able to treat any type of virus,
+3,Which of the following people is COVID-19 more dangerous for?,Elders and people with underlying health conditions,Average Adults,Babies,Teenagers,
+1,How long does the novel coronavirus survive outside the body?,Several hours to days,Several minutes,Several seconds,Several months,
+2,"Covid-19 infects people by injecting its genome into their cells. What type of genetic material is the Covid-19 genome made up of?
+",RNA,DNA,Mitchondria,Ribosome,
+3,How should a mask be properly worn?,Put it over your nose and mouth and secure it under your chin,Put it under your nose and mouth and secure it under your chin,Put it over your eyes,Just cover the mouth and not the nose,
+1,What is a fomite?,a contaminated object or surface,a contaminated person,another name for coronavirus,an uncontaminated object or surface,
+2,"Can letters, products and packages be contaminated by the coronavirus (COVID-19) virus?",Yes because it can carry germs,No because it does not carry any outside germs,Yes because they do not have masks on them,No because they are always clean with no germs,
+3,"On March 1st, there were fewer than a dozen known COVID-19 related deaths in the US. Two months later, how many COVID-19 deaths were reported in the US?","As of May 1, there were about 60,000 deaths in the US.","As of May 1, there were about 600,000 deaths in the US.","As of May 1, there were about 6,000 deaths in the US.","As of May 1, there were about 600 deaths in the US.",
