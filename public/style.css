@@ -4,6 +4,7 @@
 
 body{
     background-color: #303030;
+    overflow: hidden;
 }
 :root{
     --size:400px;
@@ -47,7 +48,7 @@ body{
     font-family: 'Roboto', sans-serif;
     color: white;
     text-align: center;
-    
+    line-height:40px;
 }  
   img {
     display: inline;
@@ -64,3 +65,6 @@ body{
       float:right;
       margin-right: 15%;
   }
+.disclaimer{
+    font-size:11px;
+}
