@@ -244,15 +244,21 @@ function byebye(){
 //code to recreate the home screen
 var homescreen=`
 <div id='go away' class='goaway'>
-<p id='title' class='title'>Covid Quiz</p>
-<img alt='Pandemic Pupil' src='./L/Logo.png' class='graphic' id='graphic' align='left'>
-<div class='blurb' id='blurb'><p style='margin-right:5%;'>
-    This quiz will test your knowledge on the pandemic and see how much you really know. The goal is to keep everbody safe 
-    and informed, and hopefully prevent the spread of misinformation. Enjoy the quiz!
-</p></div></div>
+    <p id='title' class='title'>Covid Quiz</p>
+    <img alt='Pandemic Pupil' src='./L/Logo.png' class='graphic' id='graphic' align='left'>
+    <div class='blurb' id='blurb'><p style='margin-right:5%;'>
+        This quiz will test your knowledge on the pandemic and see how much you really know. The goal is to keep everbody safe 
+        and informed, and hopefully prevent the spread of misinformation. Enjoy the quiz!
+    </p></div></div>
 <br>
-<button onclick='quiz()' id='start' class='start'>Start</button>
-<div class=redir><a href='../Santiagos Home Page/home.html'><img class='emoji' alt='Virus' src='L/emoji.png'></a><p class='redirtxt'>Back Home</p></div>`
+    <button onclick='quiz()' id='start' class='start'>Start</button>
+    <div class=redir>
+        <a href='../index.html'>
+            <img class='emoji' alt='Virus' src='L/emoji.png'>
+        </a>
+        <p class='redirtxt'>Back Home</p>
+    </div>
+    `
 function GoBack(){
     score=0
     Qcounter=0
